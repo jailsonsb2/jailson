@@ -1,54 +1,227 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jailson - Links</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Jailson | Desenvolvedor & Analista de Dados</title>
+    <meta name="description" content="Portfólio e Links de Jailson. Analista de Sistemas, Dados e Projetos IoT.">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8; /* Um azul "tech" */
+            --accent-hover: #0ea5e9;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1rem;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 680px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Perfil */
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background-color: var(--card-bg);
+            border: 3px solid var(--accent);
+            margin-bottom: 1rem;
+            object-fit: cover;
+            /* Substitua pelo link da sua foto real ou mantenha o placeholder */
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .role {
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .bio {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        /* Links e Projetos */
+        .section-title {
+            text-align: left;
+            margin: 2rem 0 1rem;
+            font-size: 1.2rem;
+            border-bottom: 1px solid var(--card-bg);
+            padding-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .links-grid {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 1.2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: transform 0.2s, background-color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid transparent;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            background-color: #263346;
+            border-color: var(--accent);
+        }
+
+        .card-content {
+            text-align: left;
+        }
+
+        .card-title {
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .card-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .icon {
+            font-size: 1.5rem;
+            margin-left: 1rem;
+            color: var(--accent);
+        }
+
+        /* Tags para tecnologias */
+        .tags {
+            margin-top: 0.5rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .tag {
+            background-color: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        footer {
+            margin-top: 4rem;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+    </style>
 </head>
 <body>
+
     <div class="container">
-        <div class="profile">
-            <img src="logo.jpeg" alt="Jailson Bezerra">
-            <h1>Jailson Bezerra</h1>
-            <p>Electronics Technician, Engineering Student, and Hobbyist Software Developer</p>
+        <img src="https://ui-avatars.com/api/?name=Jailson&background=38bdf8&color=fff&size=128" alt="Foto de Jailson" class="profile-img">
+        
+        <h1>Jailson</h1>
+        <div class="role">Analista de Sistemas | Dados | Eng. Elétrica</div>
+        
+        <p class="bio">
+            Unindo 15 anos de experiência em eletrônica com análise de dados estratégica e desenvolvimento de software. Especialista em transformar dados complexos em soluções práticas.
+        </p>
+
+        <div class="links-grid">
+            <a href="https://github.com/SEU_USUARIO" target="_blank" class="card">
+                <div class="card-content">
+                    <span class="card-title">GitHub</span>
+                    <span class="card-desc">Meus códigos e contribuições open source</span>
+                </div>
+                <div class="icon">➜</div>
+            </a>
+            
+            <a href="https://linkedin.com/in/SEU_USUARIO" target="_blank" class="card">
+                <div class="card-content">
+                    <span class="card-title">LinkedIn</span>
+                    <span class="card-desc">Trajetória profissional e conexões</span>
+                </div>
+                <div class="icon">➜</div>
+            </a>
         </div>
-        <ul class="links">
-            <li>
-                <a href="https://www.linkedin.com/in/jailsonsb/" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/jailsonsb2" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-            </li>
-            <li>
-                <a href="https://www.radioplayer.icu/" target="_blank">
-                    <i class="fa-solid fa-radio"></i> Minha rádio
-                </a>
-            </li>
-            <li>
-                <a href="mailto:contato@jailson.es">
-                    <i class="fas fa-envelope"></i> E-mail
-                </a>
-            </li>
-        </ul>
-        <div class="footer">
-            <p>© 2025 - Jailson Bezerra</p>
+
+        <h2 class="section-title">Principais Projetos</h2>
+        
+        <div class="links-grid">
+            <a href="https://play.google.com/store/apps/details?id=com.jbcast.dfbus" target="_blank" class="card">
+                <div class="card-content">
+                    <span class="card-title">DF Bus 🚌</span>
+                    <span class="card-desc">App de mobilidade urbana em tempo real para o DF.</span>
+                    <div class="tags">
+                        <span class="tag">Android</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="card"> <div class="card-content">
+                    <span class="card-title">Rádio Aurora 📻</span>
+                    <span class="card-desc">Sistema web de automação e player de rádio.</span>
+                    <div class="tags">
+                        <span class="tag">Web Audio API</span>
+                        <span class="tag">PHP/JS</span>
+                        <span class="tag">Streaming</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="card"> <div class="card-content">
+                    <span class="card-title">Monitoramento de Energia IoT ⚡</span>
+                    <span class="card-desc">Solução corporativa de baixo custo com ESP32.</span>
+                    <div class="tags">
+                        <span class="tag">ESP32</span>
+                        <span class="tag">MQTT</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">Grafana</span>
+                    </div>
+                </div>
+            </a>
         </div>
+
+        <footer>
+            &copy; 2025 jailson.es - Hospedado em OCI/DigitalOcean
+        </footer>
     </div>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KYQDJ9ETSY"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-KYQDJ9ETSY');
-    </script>
 </body>
 </html>
