@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jailson | Desenvolvedor & Analista de Dados</title>
-    <meta name="description" content="Portfólio e Links de Jailson. Analista de Sistemas, Dados e Projetos IoT.">
+    <title>Jailson Bezerra | Engenheiro Eletricista & Software Engineer</title>
+    <meta name="description" content="Portfólio de Jailson Bezerra. Engenheiro Eletricista, Especialista em Sistemas Distribuídos, Arquiteturas de Dados, IA Agêntica e IoT de Ponta a Ponta.">
     <style>
         :root {
             --bg-color: #0f172a;
             --card-bg: #1e293b;
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
-            --accent: #38bdf8; /* Um azul "tech" */
+            --accent: #38bdf8; /* Azul Tech moderno */
             --accent-hover: #0ea5e9;
         }
 
@@ -47,38 +47,40 @@
             border: 3px solid var(--accent);
             margin-bottom: 1rem;
             object-fit: cover;
-            /* Substitua pelo link da sua foto real ou mantenha o placeholder */
         }
 
         h1 {
-            font-size: 1.8rem;
-            margin-bottom: 0.5rem;
+            font-size: 2rem;
+            margin-bottom: 0.3rem;
+            letter-spacing: -0.5px;
         }
 
         .role {
             color: var(--accent);
             font-weight: 600;
-            margin-bottom: 1rem;
+            margin-bottom: 1.2rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
+            letter-spacing: 1.5px;
+            font-size: 0.85rem;
         }
 
         .bio {
             color: var(--text-secondary);
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             line-height: 1.6;
             font-size: 1rem;
+            text-align: justify;
         }
 
         /* Links e Projetos */
         .section-title {
             text-align: left;
-            margin: 2rem 0 1rem;
-            font-size: 1.2rem;
+            margin: 2.5rem 0 1rem;
+            font-size: 1.25rem;
             border-bottom: 1px solid var(--card-bg);
             padding-bottom: 0.5rem;
             color: var(--text-primary);
+            letter-spacing: 0.5px;
         }
 
         .links-grid {
@@ -88,84 +90,97 @@
 
         .card {
             background-color: var(--card-bg);
-            padding: 1.2rem;
+            padding: 1.25rem;
             border-radius: 12px;
             text-decoration: none;
             color: var(--text-primary);
-            transition: transform 0.2s, background-color 0.2s;
+            transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border: 1px solid transparent;
+            border: 1px solid rgba(56, 189, 248, 0.05);
         }
 
         .card:hover {
             transform: translateY(-3px);
-            background-color: #263346;
+            background-color: #243249;
             border-color: var(--accent);
         }
 
         .card-content {
             text-align: left;
+            width: 100%;
         }
 
         .card-title {
             font-weight: 700;
+            font-size: 1.1rem;
             display: block;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.4rem;
         }
 
         .card-desc {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             color: var(--text-secondary);
+            line-height: 1.4;
         }
 
         .icon {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             margin-left: 1rem;
             color: var(--accent);
+            transition: transform 0.2s;
+        }
+
+        .card:hover .icon {
+            transform: translateX(3px);
         }
 
         /* Tags para tecnologias */
         .tags {
-            margin-top: 0.5rem;
+            margin-top: 0.8rem;
             display: flex;
-            gap: 0.5rem;
+            gap: 0.4rem;
             flex-wrap: wrap;
         }
         
         .tag {
-            background-color: rgba(56, 189, 248, 0.1);
+            background-color: rgba(56, 189, 248, 0.08);
             color: var(--accent);
-            font-size: 0.7rem;
-            padding: 2px 8px;
-            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 6px;
+            border: 1px solid rgba(56, 189, 248, 0.15);
         }
 
         footer {
-            margin-top: 4rem;
+            margin-top: 5rem;
             font-size: 0.8rem;
             color: var(--text-secondary);
+            letter-spacing: 0.5px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <img src="eu.jpg" alt="Foto de Jailson" class="profile-img">
+        <!-- Foto de Perfil -->
+        <img src="eu.jpg" alt="Foto de Jailson Bezerra" class="profile-img">
         
-        <h1>Jailson</h1>
-        <div class="role">Analista de Sistemas | Dados | Eng. Elétrica</div>
+        <h1>Jailson Bezerra</h1>
+        <div class="role">Engenheiro Eletricista | Software Engineer | Data & IoT</div>
         
         <p class="bio">
-            Unindo a experiência em eletrônica com análise de dados estratégica e desenvolvimento de software. Especialista em transformar dados complexos em soluções práticas.
+            Especialista em unir a solidez da engenharia de hardware à flexibilidade do desenvolvimento de software. Com ampla vivência técnica e de gestão estratégica, atuo projetando arquiteturas de dados assíncronas, automações de processos de missão crítica, soluções robustas de IoT e inteligência artificial aplicada ao ecossistema produtivo.
         </p>
 
+        <!-- Seção de Canais Principais -->
         <div class="links-grid">
             <a href="https://github.com/jailsonsb2" target="_blank" class="card">
                 <div class="card-content">
                     <span class="card-title">GitHub</span>
-                    <span class="card-desc">Meus códigos e contribuições open source</span>
+                    <span class="card-desc">Repositórios de código, automações corporativas e contribuições abertas.</span>
                 </div>
                 <div class="icon">➜</div>
             </a>
@@ -173,67 +188,81 @@
             <a href="https://www.linkedin.com/in/jailsonsb/" target="_blank" class="card">
                 <div class="card-content">
                     <span class="card-title">LinkedIn</span>
-                    <span class="card-desc">Trajetória profissional e conexões</span>
+                    <span class="card-desc">Conexões profissionais, artigos técnicos e histórico de carreira.</span>
                 </div>
                 <div class="icon">➜</div>
             </a>
         </div>
 
-        <h2 class="section-title">Principais Projetos</h2>
+        <!-- Seção de Projetos Consolidados -->
+        <h2 class="section-title">Soluções & Projetos em Destaque</h2>
         
         <div class="links-grid">
+            <!-- DF Bus -->
             <a href="https://play.google.com/store/apps/details?id=com.jbcast.dfbus" target="_blank" class="card">
                 <div class="card-content">
                     <span class="card-title">DF Bus 🚌</span>
-                    <span class="card-desc">App de mobilidade urbana em tempo real para o DF.</span>
+                    <span class="card-desc">Plataforma independente de mobilidade urbana em tempo real integrando telemetria de GPS públicos com IA conversacional agêntica (Gemini API).</span>
                     <div class="tags">
-                        <span class="tag">Android</span>
+                        <span class="tag">Android App</span>
+                        <span class="tag">LLM / Gemini API</span>
                         <span class="tag">FastAPI</span>
-                        <span class="tag">JavaScript</span>
+                        <span class="tag">PWA / Geofencing</span>
                     </div>
                 </div>
+                <div class="icon">➜</div>
             </a>
 
-            <a href="https://radio.jailson.es" class="card"> <div class="card-content">
-                    <span class="card-title">Rádio 📻</span>
-                    <span class="card-desc">Player de rádio.</span>
+            <!-- Rádio PWA -->
+            <a href="https://radio.jailson.es" target="_blank" class="card"> 
+                <div class="card-content">
+                    <span class="card-title">Rádio Digital Multiplataforma 📻</span>
+                    <span class="card-desc">Player nativo web customizado para streaming contínuo de áudio digital de baixa latência e alta fidelidade.</span>
                     <div class="tags">
-                        <span class="tag">Radioplayer</span>
-                        <span class="tag">HTML5/CSS/JS</span>
                         <span class="tag">PWA</span>
+                        <span class="tag">Audio Stream</span>
+                        <span class="tag">HTML5 / JavaScript</span>
+                        <span class="tag">UX/UI</span>
                     </div>
                 </div>
+                <div class="icon">➜</div>
             </a>
 
+            <!-- Radio Metadata & History API -->
             <a href="https://twj.es/dashboard" target="_blank" class="card"> 
                 <div class="card-content">
                     <span class="card-title">Radio Metadata & History API ⚙️</span>
-                    <span class="card-desc">Uma solução de alta performance e baixo custo para extração de metadados, capas de álbuns e histórico de músicas (Icecast/Shoutcast)</span>
+                    <span class="card-desc">Arquitetura de microsserviço de alta performance dedicada à raspagem, extração em tempo real e cache de metadados musicais de servidores Icecast/Shoutcast.</span>
                     <div class="tags">
-                        <span class="tag">Rest API</span>
                         <span class="tag">PHP 8</span>
-                        <span class="tag">Redis</span>
+                        <span class="tag">REST API</span>
+                        <span class="tag">Redis (Caching)</span>
                         <span class="tag">Docker</span>
                         <span class="tag">High Performance</span>
                     </div>
                 </div>
+                <div class="icon">➜</div>
             </a>
 
-            <a href="https://github.com/jailsonsb2/monitoramento-iot" class="card"> <div class="card-content">
+            <!-- Monitoramento de Energia IoT -->
+            <a href="https://github.com/jailsonsb2/monitoramento-iot" target="_blank" class="card"> 
+                <div class="card-content">
                     <span class="card-title">Monitoramento de Energia IoT ⚡</span>
-                    <span class="card-desc">Solução corporativa de baixo custo com ESP32.</span>
+                    <span class="card-desc">Infraestrutura ponta a ponta integrando hardware embarcado e processamento de telemetria elétrica em tempo real com barramento assíncrono.</span>
                     <div class="tags">
-                        <span class="tag">ESP32</span>
-                        <span class="tag">MQTT</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">Grafana</span>
+                        <span class="tag">ESP32 / PZEM-004T</span>
+                        <span class="tag">MQTT Protocol</span>
+                        <span class="tag">InfluxDB (Time-series)</span>
+                        <span class="tag">Grafana Dashboards</span>
                     </div>
                 </div>
+                <div class="icon">➜</div>
             </a>
         </div>
 
+        <!-- Rodapé Em Conformidade com o Ano Atual -->
         <footer>
-            &copy; 2026 jailson.es - Hospedado em DigitalOcean
+            &copy; 2026 jailson.es &bull; Engenharia e Desenvolvimento &bull; Infraestrutura de Dados &bull; Soluções IoT &bull; Inteligência Artificial Agêntica
         </footer>
     </div>
 
