@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artigo | Jailson</title>
+    <!-- Script para converter Markdown para HTML na hora -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body { font-family: sans-serif; background: #121212; color: #e0e0e0; max-width: 800px; margin: 40px auto; padding: 0 20px; line-height: 1.6; }
+        a { color: #4fc3f7; }
+        pre { background: #1e1e1e; padding: 15px; overflow-x: auto; border-radius: 4px; }
+        code { font-family: monospace; color: #f48fb1; }
+        pre code { color: #fff; }
+        img { max-width: 100%; height: auto; }
+    </style>
+</head>
+<body>
+
+    <a href="./" style="color: #aaa; text-decoration: none;">← Voltar para o Blog</a>
+    
+    <article id="post-content">Carregando conteúdo...</article>
+
+    <script>
+        const owner = 'jailsonsb2';
+        const repo = 'jailson';
+        const path = 'blog/posts';
+
+        // Pega o parâmetro ?p= da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const postSlug = urlParams.get('p');
+
+        async function loadPostContent() {
+            const articleElement = document.getElementById('post-content');
+            if (!postSlug) {
+                articleElement.innerHTML = '<p>Artigo não encontrado.</p>';
+                return;
+            }
+
+            try {
+                // Busca o arquivo Markdown bruto direto do repositório
+                const response = await fetch(`https://raw.githubusercontent.com/${owner}/${repo}/main/${path}/${postSlug}.md`);
+                if (!response.ok) throw new Error('Artigo não encontrado');
+
+                let text = await response.ok ? await response.text() : '';
+
+                // Remove o bloco de metadados do topo (frontmatter) para renderizar só o texto
+                const cleanMarkdown = text.replace(/^---[\s\S]*?---/, '');
+
+                // Converte markdown para HTML usando a biblioteca Marked
+                articleElement.innerHTML = marked.parse(cleanMarkdown);
+            } catch (error) {
+                articleElement.innerHTML = '<p>Erro ao carregar o conteúdo do artigo.</p>';
+                console.error(error);
+            }
+        }
+
+        loadPostContent();
+    </script>
+</body>
+</html>
