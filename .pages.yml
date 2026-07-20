@@ -1,0 +1,36 @@
+# Configuração do Pages CMS para o repositório jailson
+media:
+  input: images/uploads
+  output: /images/uploads
+
+content:
+  - name: blog
+    label: Artigos do Blog
+    type: collection
+    path: blog/posts                 # Pasta onde os arquivos .md são salvos
+    filename: "{{year}}-{{month}}-{{day}}-{{fields.title}}.md"
+    format: frontmatter
+    view:
+      fields: [title, date, description]
+      sort: date
+      sortDirection: desc
+    fields:
+      - name: title
+        label: Título
+        type: string
+        required: true
+      - name: date
+        label: Data de Publicação
+        type: date
+        required: true
+      - name: description
+        label: Descrição Curta
+        type: text
+        required: true
+      - name: cover
+        label: Imagem de Capa (opcional)
+        type: image
+        required: false
+      - name: body
+        label: Conteúdo do Post
+        type: rich-text
