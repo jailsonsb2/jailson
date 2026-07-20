@@ -9,7 +9,7 @@ content:
     type: collection
     path: blog/posts                 # Pasta onde os arquivos .md são salvos
     filename: "{{year}}-{{month}}-{{day}}-{{fields.title}}.md"
-    format: frontmatter
+    format: yaml-frontmatter
     view:
       fields: [title, date, description]
       sort: date

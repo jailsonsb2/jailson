@@ -64,17 +64,20 @@
 
         .posts-grid {
             display: grid;
-            gap: 1rem;
+            gap: 1.1rem;
         }
 
         .post-card {
             background-color: var(--card-bg);
-            padding: 1.25rem;
+            padding: 1.4rem 1.5rem;
             border-radius: 12px;
             text-decoration: none;
             color: var(--text-primary);
             transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
             border: 1px solid rgba(56, 189, 248, 0.05);
         }
 
@@ -84,26 +87,43 @@
             border-color: var(--accent);
         }
 
-        .post-title {
-            font-weight: 700;
-            font-size: 1.15rem;
-            display: block;
-            margin-bottom: 0.4rem;
+        .post-card:hover .post-arrow {
+            transform: translateX(3px);
+        }
+
+        .post-content {
+            min-width: 0;
         }
 
         .post-date {
-            font-size: 0.8rem;
+            font-size: 0.78rem;
             color: var(--accent);
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 0.6px;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .post-title {
+            font-weight: 700;
+            font-size: 1.2rem;
+            letter-spacing: -0.3px;
+            display: block;
+            margin-bottom: 0.5rem;
         }
 
         .post-desc {
             font-size: 0.9rem;
             color: var(--text-secondary);
-            line-height: 1.4;
-            margin-top: 0.5rem;
+            line-height: 1.5;
+        }
+
+        .post-arrow {
+            font-size: 1.2rem;
+            color: var(--accent);
+            transition: transform 0.2s;
+            flex-shrink: 0;
         }
 
         .state-message {
@@ -200,9 +220,12 @@
                     card.className = 'post-card';
                     card.href = `posts/post.html?p=${encodeURIComponent(post.slug)}`;
                     card.innerHTML = `
-                        <span class="post-date">${dateStr}</span>
-                        <span class="post-title">${post.title}</span>
-                        <p class="post-desc">${post.description}</p>
+                        <div class="post-content">
+                            <span class="post-date">${dateStr}</span>
+                            <span class="post-title">${post.title}</span>
+                            <p class="post-desc">${post.description}</p>
+                        </div>
+                        <div class="post-arrow">➜</div>
                     `;
                     listElement.appendChild(card);
                 });
