@@ -198,7 +198,7 @@
                 document.title = `${meta.title || 'Artigo'} | Jailson Bezerra`;
 
                 if (meta.date) {
-                    dateElement.textContent = new Date(meta.date).toLocaleDateString('pt-BR', {
+                    dateElement.textContent = new Date(`${meta.date}T00:00:00`).toLocaleDateString('pt-BR', {
                         day: '2-digit', month: 'long', year: 'numeric'
                     });
                 }

@@ -203,7 +203,7 @@
                         slug: file.name.replace(/\.md$/, ''),
                         title: meta.title || file.name,
                         description: meta.description || '',
-                        date: meta.date ? new Date(meta.date) : null
+                        date: meta.date ? new Date(`${meta.date}T00:00:00`) : null
                     };
                 }));
 
