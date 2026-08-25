@@ -3,479 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jailson Bezerra | Engenheiro Eletricista & Software Engineer</title>
-    <meta name="description" content="Portfólio de Jailson Bezerra, engenheiro eletricista e especialista em Engenharia de Dados, Software Engineering, sistemas distribuídos, automação e IA agêntica.">
+    <meta name="theme-color" content="#f4f5f7">
+    <title>Jailson Bezerra | Links</title>
+    <meta name="description" content="Links, projetos e canais oficiais de Jailson Bezerra.">
     <style>
-        :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --accent: #38bdf8; /* Azul Tech moderno */
-            --accent-hover: #0ea5e9;
+        :root { --background: #f4f5f7; --surface: #fff; --surface-hover: #f8fafc; --text: #16191d; --muted: #626a73; --line: #dfe3e8; --accent: #087f5b; --accent-soft: #e8f5ef; --focus: #0b6bdb; }
+        * { box-sizing: border-box; }
+        html { color-scheme: light; }
+        body { min-height: 100vh; margin: 0; background: var(--background); color: var(--text); font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0; }
+        .page { width: min(100% - 32px, 620px); margin: 0 auto; padding: 48px 0 32px; }
+        .profile { display: flex; align-items: center; gap: 18px; margin-bottom: 28px; }
+        .profile-image { width: 88px; height: 88px; flex: 0 0 88px; border: 1px solid var(--line); border-radius: 50%; object-fit: cover; background: var(--surface); }
+        .profile-copy { min-width: 0; }
+        h1 { margin: 0 0 5px; font-size: clamp(1.55rem, 5vw, 2rem); line-height: 1.15; letter-spacing: 0; }
+        .handle { margin: 0 0 8px; color: var(--accent); font-size: .9rem; font-weight: 700; }
+        .intro { margin: 0; color: var(--muted); font-size: .95rem; line-height: 1.45; }
+        .section { margin-top: 26px; }
+        .section-title { margin: 0 0 10px; color: var(--muted); font-size: .75rem; font-weight: 800; letter-spacing: 0; text-transform: uppercase; }
+        .link-list { display: grid; gap: 10px; }
+        .link { display: grid; grid-template-columns: 42px minmax(0, 1fr) 20px; align-items: center; gap: 12px; min-height: 72px; padding: 12px 16px 12px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--text); text-decoration: none; transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease; }
+        .link:hover { border-color: #aeb7c0; background: var(--surface-hover); transform: translateY(-1px); }
+        .link:focus-visible { outline: 3px solid color-mix(in srgb, var(--focus) 28%, transparent); outline-offset: 2px; }
+        .link-icon { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 7px; background: var(--accent-soft); color: var(--accent); }
+        .link-icon svg, .arrow svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+        .link-copy { min-width: 0; }
+        .link-title, .link-description { display: block; }
+        .link-title { margin-bottom: 3px; font-size: .98rem; font-weight: 750; }
+        .link-description { overflow: hidden; color: var(--muted); font-size: .82rem; line-height: 1.35; text-overflow: ellipsis; white-space: nowrap; }
+        .arrow { color: #87909a; }
+        .arrow svg { width: 18px; height: 18px; }
+        footer { margin-top: 32px; color: var(--muted); font-size: .78rem; text-align: center; }
+        @media (max-width: 480px) {
+            .page { width: min(100% - 24px, 620px); padding-top: 28px; }
+            .profile { align-items: flex-start; gap: 14px; }
+            .profile-image { width: 76px; height: 76px; flex-basis: 76px; }
+            .intro { font-size: .88rem; }
+            .link { grid-template-columns: 40px minmax(0, 1fr) 18px; min-height: 68px; }
+            .link-icon { width: 40px; height: 40px; }
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem 1rem;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 900px;
-            width: 100%;
-            text-align: center;
-        }
-
-        /* Perfil */
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background-color: var(--card-bg);
-            border: 3px solid var(--accent);
-            margin-bottom: 1rem;
-            object-fit: cover;
-        }
-
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 0.3rem;
-            letter-spacing: -0.5px;
-        }
-
-        .role {
-            color: var(--accent);
-            font-weight: 600;
-            margin-bottom: 1.2rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-size: 0.85rem;
-        }
-
-        .bio {
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-            font-size: 1rem;
-            text-align: justify;
-        }
-
-        .hero-actions {
-            display: flex;
-            justify-content: center;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-            margin-bottom: 2.5rem;
-        }
-
-        .button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.45rem;
-            padding: 0.75rem 1rem;
-            border-radius: 9px;
-            background: var(--accent);
-            color: var(--bg-color);
-            font-weight: 700;
-            text-decoration: none;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-
-        .button:hover {
-            background: var(--accent-hover);
-            transform: translateY(-2px);
-        }
-
-        .button.secondary {
-            background: transparent;
-            color: var(--accent);
-            border: 1px solid var(--accent);
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0.75rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .stat {
-            padding: 1rem 0.75rem;
-            background: var(--card-bg);
-            border-radius: 10px;
-            border: 1px solid rgba(56, 189, 248, 0.1);
-        }
-
-        .stat strong {
-            display: block;
-            color: var(--accent);
-            font-size: 1.35rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .stat span {
-            color: var(--text-secondary);
-            font-size: 0.78rem;
-            line-height: 1.3;
-        }
-
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
-            text-align: left;
-        }
-
-        .panel {
-            padding: 1.25rem;
-            background: var(--card-bg);
-            border-radius: 12px;
-            border: 1px solid rgba(56, 189, 248, 0.05);
-        }
-
-        .panel h3 {
-            color: var(--accent);
-            font-size: 1rem;
-            margin-bottom: 0.65rem;
-        }
-
-        .panel p,
-        .panel li {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.55;
-        }
-
-        .panel ul {
-            padding-left: 1.1rem;
-        }
-
-        .timeline {
-            text-align: left;
-            display: grid;
-            gap: 1rem;
-        }
-
-        .timeline-item {
-            padding: 1.2rem 1.25rem;
-            border-left: 3px solid var(--accent);
-            background: var(--card-bg);
-            border-radius: 0 12px 12px 0;
-        }
-
-        .timeline-item h3 {
-            font-size: 1rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .timeline-meta {
-            display: block;
-            color: var(--accent);
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-item p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-
-        /* Links e Projetos */
-        .section-title {
-            text-align: left;
-            margin: 2.5rem 0 1rem;
-            font-size: 1.25rem;
-            border-bottom: 1px solid var(--card-bg);
-            padding-bottom: 0.5rem;
-            color: var(--text-primary);
-            letter-spacing: 0.5px;
-        }
-
-        .links-grid {
-            display: grid;
-            gap: 1rem;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            padding: 1.25rem;
-            border-radius: 12px;
-            text-decoration: none;
-            color: var(--text-primary);
-            transition: transform 0.2s, background-color 0.2s, border-color 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border: 1px solid rgba(56, 189, 248, 0.05);
-        }
-
-        .card:hover {
-            transform: translateY(-3px);
-            background-color: #243249;
-            border-color: var(--accent);
-        }
-
-        .card-content {
-            text-align: left;
-            width: 100%;
-        }
-
-        .card-title {
-            font-weight: 700;
-            font-size: 1.1rem;
-            display: block;
-            margin-bottom: 0.4rem;
-        }
-
-        .card-desc {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            line-height: 1.4;
-        }
-
-        .icon {
-            font-size: 1.2rem;
-            margin-left: 1rem;
-            color: var(--accent);
-            transition: transform 0.2s;
-        }
-
-        .card:hover .icon {
-            transform: translateX(3px);
-        }
-
-        /* Tags para tecnologias */
-        .tags {
-            margin-top: 0.8rem;
-            display: flex;
-            gap: 0.4rem;
-            flex-wrap: wrap;
-        }
-        
-        .tag {
-            background-color: rgba(56, 189, 248, 0.08);
-            color: var(--accent);
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 3px 10px;
-            border-radius: 6px;
-            border: 1px solid rgba(56, 189, 248, 0.15);
-        }
-
-        footer {
-            margin-top: 5rem;
-            font-size: 0.8rem;
-            color: var(--text-secondary);
-            letter-spacing: 0.5px;
-        }
-
-        @media (max-width: 680px) {
-            .stats-grid,
-            .content-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .bio {
-                text-align: left;
-            }
-        }
-
-        @media (max-width: 420px) {
-            .stats-grid,
-            .content-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        @media (prefers-reduced-motion: reduce) { .link { transition: none; } }
     </style>
 </head>
 <body>
+    <main class="page">
+        <header class="profile">
+            <img src="eu.jpeg" alt="Jailson Bezerra" class="profile-image">
+            <div class="profile-copy">
+                <h1>Jailson Bezerra</h1>
+                <p class="handle">@jailsonsb2</p>
+                <p class="intro">Software, dados, automação e inteligência artificial.</p>
+            </div>
+        </header>
 
-    <div class="container">
-        <!-- Foto de Perfil -->
-        <img src="eu.jpeg" alt="Foto de Jailson Bezerra" class="profile-img">
-        
-        <h1>Jailson Bezerra</h1>
-        <div class="role">Software Engineer | Data Engineering | Generative & Agentic AI</div>
-        
-        <p class="bio">
-            Engenheiro Eletricista e Especialista em Engenharia de Dados, atuando na interseção entre software, dados, automação e inteligência artificial. Lidero tecnicamente sistemas distribuídos e soluções de IA em ambientes de missão crítica, conectando arquitetura, integrações corporativas, observabilidade e operação com impacto mensurável.
-        </p>
+        <section class="section" aria-labelledby="canais-title">
+            <h2 class="section-title" id="canais-title">Canais</h2>
+            <div class="link-list">
+                <a class="link" href="https://github.com/jailsonsb2" target="_blank" rel="noopener noreferrer">
+                    <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.4 4 5 5 0 0 0 19.3.5S18.2.1 15 1.8a13.4 13.4 0 0 0-7 0C4.8.1 3.7.5 3.7.5A5 5 0 0 0 3.6 4a5.4 5.4 0 0 0-1.4 3.7c0 5.3 3.5 6.5 6.8 6.9A4.8 4.8 0 0 0 8 18v4"/><path d="M8 19c-3 .9-3-1.5-4-2"/></svg></span>
+                    <span class="link-copy"><span class="link-title">GitHub</span><span class="link-description">Código, projetos e experimentos</span></span>
+                    <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
+                </a>
+                <a class="link" href="https://www.linkedin.com/in/jailsonsb/" target="_blank" rel="noopener noreferrer">
+                    <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><path d="M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg></span>
+                    <span class="link-copy"><span class="link-title">LinkedIn</span><span class="link-description">Perfil profissional e publicações</span></span>
+                    <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
+                </a>
+                <a class="link" href="mailto:jailson.sb2@gmail.com">
+                    <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.7 5.5a2.4 2.4 0 0 1-2.6 0L2 7"/></svg></span>
+                    <span class="link-copy"><span class="link-title">E-mail</span><span class="link-description">jailson.sb2@gmail.com</span></span>
+                    <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
+                </a>
+            </div>
+        </section>
 
-        <div class="hero-actions">
-            <a href="Jailson_Bezerra_CV_2026_v7.pdf" class="button" download>Baixar currículo (PDF)</a>
-            <a href="mailto:jailson.sb2@gmail.com" class="button secondary">Entrar em contato</a>
-        </div>
+        <section class="section" aria-labelledby="projetos-title">
+            <h2 class="section-title" id="projetos-title">Projetos</h2>
+            <div class="link-list">
+                <a class="link" href="https://play.google.com/store/apps/details?id=com.jbcast.dfbus" target="_blank" rel="noopener noreferrer">
+                    <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 6v6h8V6M5 12h14l-1 8H6l-1-8ZM7 6h10l2 6H5l2-6ZM9 20v2M15 20v2"/></svg></span>
+                    <span class="link-copy"><span class="link-title">DF Bus</span><span class="link-description">Mobilidade urbana em tempo real</span></span>
+                    <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
+                </a>
+                <a class="link" href="https://radio.jailson.es" target="_blank" rel="noopener noreferrer">
+                    <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="5" rx="2"/><path d="m8 5 8-3M6 9h8"/><circle cx="16" cy="15" r="3"/><path d="M6 13h2M6 17h2"/></svg></span>
+                    <span class="link-copy"><span class="link-title">Rádio Digital</span><span class="link-description">Streaming de áudio multiplataforma</span></span>
+                    <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
+                </a>
+                <a class="link" href="https://twj.es/dashboard" target="_blank" rel="noopener noreferrer">
+                    <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19V3M2 19h22"/></svg></span>
+                    <span class="link-copy"><span class="link-title">Radio Metadata</span><span class="link-description">Dashboard e histórico de metadados</span></span>
+                    <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
+                </a>
+                <a class="link" href="https://github.com/jailsonsb2/monitoramento-iot" target="_blank" rel="noopener noreferrer">
+                    <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-9 12h8l-1 8 9-12h-8l1-8Z"/></svg></span>
+                    <span class="link-copy"><span class="link-title">Monitoramento de Energia IoT</span><span class="link-description">Telemetria elétrica em tempo real</span></span>
+                    <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
+                </a>
+            </div>
+        </section>
 
-        <div class="stats-grid" aria-label="Resultados profissionais em destaque">
-            <div class="stat"><strong>99,8%</strong><span>de conformidade em avaliação de laudos por IA</span></div>
-            <div class="stat"><strong>20%</strong><span>dos atendimentos executados sem interação humana</span></div>
-            <div class="stat"><strong>10+</strong><span>sistemas legados integrados</span></div>
-            <div class="stat"><strong>30%</strong><span>de ganho de produtividade da equipe</span></div>
-        </div>
-
-        <!-- Seção de Canais Principais -->
-        <div class="links-grid">
-            <a href="https://github.com/jailsonsb2" target="_blank" rel="noopener noreferrer" class="card">
-                <div class="card-content">
-                    <span class="card-title">GitHub</span>
-                    <span class="card-desc">Repositórios de código, automações corporativas e contribuições abertas.</span>
-                </div>
-                <div class="icon">➜</div>
-            </a>
-            
-            <a href="https://www.linkedin.com/in/jailsonsb/" target="_blank" rel="noopener noreferrer" class="card">
-                <div class="card-content">
-                    <span class="card-title">LinkedIn</span>
-                    <span class="card-desc">Conexões profissionais, artigos técnicos e histórico de carreira.</span>
-                </div>
-                <div class="icon">➜</div>
-            </a>
-
-        </div>
-
-        <h2 class="section-title">Especialidades</h2>
-
-        <div class="content-grid">
-            <article class="panel">
-                <h3>IA Generativa & Sistemas Agênticos</h3>
-                <p>LLMs, RAG, sistemas multiagentes, orquestração de agentes, MCP, Function Calling, avaliação contínua, Human-in-the-loop e guardrails determinísticos.</p>
-            </article>
-            <article class="panel">
-                <h3>Arquitetura & Backend</h3>
-                <p>Python, FastAPI, Django, APIs REST, microsserviços, sistemas distribuídos, arquiteturas orientadas a eventos, RabbitMQ, Docker e Linux.</p>
-            </article>
-            <article class="panel">
-                <h3>Engenharia de Dados</h3>
-                <p>SQL, Apache Airflow, ETL/ELT, pipelines, Power BI, arquitetura Medallion, Lakehouse e conceitos de Databricks.</p>
-            </article>
-            <article class="panel">
-                <h3>Confiabilidade & Automação</h3>
-                <p>Observabilidade, telemetria, monitoramento, testes automatizados E2E, Power Platform e integração de processos empresariais.</p>
-            </article>
-        </div>
-
-        <h2 class="section-title">Experiência em Destaque</h2>
-
-        <div class="timeline">
-            <article class="timeline-item">
-                <h3>Especialista em Engenharia de Dados & IA</h3>
-                <span class="timeline-meta">Claro Brasil · mai/2025 — atual</span>
-                <p>Liderança do NOC Agêntico, plataforma distribuída com React, FastAPI, RabbitMQ, Qdrant e Neo4j. A solução reduziu fluxos com MTTR de até 240 minutos para poucos minutos e ampliou a automação operacional N0.</p>
-            </article>
-            <article class="timeline-item">
-                <h3>Técnico de Rede · Automação & Dados</h3>
-                <span class="timeline-meta">Claro Brasil · ago/2022 — mai/2025</span>
-                <p>Automação crítica, qualidade de dados, integrações e observabilidade. Reestruturação de um processo com mais de 7.000 campos em 3.000+ estações, adotado como novo padrão pela equipe.</p>
-            </article>
-            <article class="timeline-item">
-                <h3>Eletrônica, Telecom & Infraestrutura Crítica</h3>
-                <span class="timeline-meta">Claro Brasil, EBC, Infraero e SEAT · 2009 — 2022</span>
-                <p>Trajetória em redes HFC, broadcast, automação, sistemas aeroportuários e implantação de soluções integradas de hardware e software.</p>
-            </article>
-        </div>
-
-        <!-- Seção de Projetos Consolidados -->
-        <h2 class="section-title">Soluções & Projetos em Destaque</h2>
-        
-        <div class="links-grid">
-            <!-- DF Bus -->
-            <a href="https://play.google.com/store/apps/details?id=com.jbcast.dfbus" target="_blank" rel="noopener noreferrer" class="card">
-                <div class="card-content">
-                    <span class="card-title">DF Bus 🚌</span>
-                    <span class="card-desc">Plataforma independente de mobilidade urbana em tempo real integrando telemetria de GPS públicos com IA conversacional agêntica (Gemini API).</span>
-                    <div class="tags">
-                        <span class="tag">Android App</span>
-                        <span class="tag">LLM / Gemini API</span>
-                        <span class="tag">FastAPI</span>
-                        <span class="tag">PWA / Geofencing</span>
-                    </div>
-                </div>
-                <div class="icon">➜</div>
-            </a>
-
-            <!-- Rádio PWA -->
-            <a href="https://radio.jailson.es" target="_blank" rel="noopener noreferrer" class="card">
-                <div class="card-content">
-                    <span class="card-title">Rádio Digital Multiplataforma 📻</span>
-                    <span class="card-desc">Player nativo web customizado para streaming contínuo de áudio digital de baixa latência e alta fidelidade.</span>
-                    <div class="tags">
-                        <span class="tag">PWA</span>
-                        <span class="tag">Audio Stream</span>
-                        <span class="tag">HTML5 / JavaScript</span>
-                        <span class="tag">UX/UI</span>
-                    </div>
-                </div>
-                <div class="icon">➜</div>
-            </a>
-
-            <!-- Radio Metadata & History API -->
-            <a href="https://twj.es/dashboard" target="_blank" rel="noopener noreferrer" class="card">
-                <div class="card-content">
-                    <span class="card-title">Radio Metadata & History API ⚙️</span>
-                    <span class="card-desc">Arquitetura de microsserviço de alta performance dedicada à raspagem, extração em tempo real e cache de metadados musicais de servidores Icecast/Shoutcast.</span>
-                    <div class="tags">
-                        <span class="tag">PHP 8</span>
-                        <span class="tag">REST API</span>
-                        <span class="tag">Redis (Caching)</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">High Performance</span>
-                    </div>
-                </div>
-                <div class="icon">➜</div>
-            </a>
-
-            <!-- Monitoramento de Energia IoT -->
-            <a href="https://github.com/jailsonsb2/monitoramento-iot" target="_blank" rel="noopener noreferrer" class="card">
-                <div class="card-content">
-                    <span class="card-title">Monitoramento de Energia IoT ⚡</span>
-                    <span class="card-desc">Infraestrutura ponta a ponta integrando hardware embarcado e processamento de telemetria elétrica em tempo real com barramento assíncrono.</span>
-                    <div class="tags">
-                        <span class="tag">ESP32 / PZEM-004T</span>
-                        <span class="tag">MQTT Protocol</span>
-                        <span class="tag">InfluxDB (Time-series)</span>
-                        <span class="tag">Grafana Dashboards</span>
-                    </div>
-                </div>
-                <div class="icon">➜</div>
-            </a>
-        </div>
-
-        <h2 class="section-title">Formação</h2>
-
-        <div class="content-grid">
-            <article class="panel">
-                <h3>Engenharia de Dados & Inteligência Artificial</h3>
-                <p>Pós-graduação · Estácio · 2026–2027</p>
-            </article>
-            <article class="panel">
-                <h3>Engenharia Elétrica</h3>
-                <p>Bacharelado · Estácio</p>
-            </article>
-            <article class="panel">
-                <h3>Eletrônica</h3>
-                <p>Curso técnico · ETB · 2006–2008</p>
-            </article>
-        </div>
-
-        <!-- Rodapé Em Conformidade com o Ano Atual -->
-        <footer>
-            &copy; 2026 jailson.es &bull; Engenharia e Desenvolvimento &bull; Infraestrutura de Dados &bull; Soluções IoT &bull; Inteligência Artificial Agêntica
-        </footer>
-    </div>
-
+        <footer>jailson.es</footer>
+    </main>
 </body>
 </html>
