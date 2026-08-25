@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jailson Bezerra | Engenheiro Eletricista & Software Engineer</title>
-    <meta name="description" content="Portfólio de Jailson Bezerra. Engenheiro Eletricista, Especialista em Sistemas Distribuídos, Arquiteturas de Dados, IA Agêntica e IoT de Ponta a Ponta.">
+    <meta name="description" content="Portfólio de Jailson Bezerra, engenheiro eletricista e especialista em Engenharia de Dados, Software Engineering, sistemas distribuídos, automação e IA agêntica.">
     <style>
         :root {
             --bg-color: #0f172a;
@@ -33,7 +33,7 @@
         }
 
         .container {
-            max-width: 680px;
+            max-width: 900px;
             width: 100%;
             text-align: center;
         }
@@ -66,10 +66,132 @@
 
         .bio {
             color: var(--text-secondary);
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem;
             line-height: 1.6;
             font-size: 1rem;
             text-align: justify;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.75rem 1rem;
+            border-radius: 9px;
+            background: var(--accent);
+            color: var(--bg-color);
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .button:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .button.secondary {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .stat {
+            padding: 1rem 0.75rem;
+            background: var(--card-bg);
+            border-radius: 10px;
+            border: 1px solid rgba(56, 189, 248, 0.1);
+        }
+
+        .stat strong {
+            display: block;
+            color: var(--accent);
+            font-size: 1.35rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat span {
+            color: var(--text-secondary);
+            font-size: 0.78rem;
+            line-height: 1.3;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            text-align: left;
+        }
+
+        .panel {
+            padding: 1.25rem;
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid rgba(56, 189, 248, 0.05);
+        }
+
+        .panel h3 {
+            color: var(--accent);
+            font-size: 1rem;
+            margin-bottom: 0.65rem;
+        }
+
+        .panel p,
+        .panel li {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.55;
+        }
+
+        .panel ul {
+            padding-left: 1.1rem;
+        }
+
+        .timeline {
+            text-align: left;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .timeline-item {
+            padding: 1.2rem 1.25rem;
+            border-left: 3px solid var(--accent);
+            background: var(--card-bg);
+            border-radius: 0 12px 12px 0;
+        }
+
+        .timeline-item h3 {
+            font-size: 1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-meta {
+            display: block;
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.5;
         }
 
         /* Links e Projetos */
@@ -160,6 +282,24 @@
             color: var(--text-secondary);
             letter-spacing: 0.5px;
         }
+
+        @media (max-width: 680px) {
+            .stats-grid,
+            .content-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .bio {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .stats-grid,
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -169,15 +309,27 @@
         <img src="eu.jpeg" alt="Foto de Jailson Bezerra" class="profile-img">
         
         <h1>Jailson Bezerra</h1>
-        <div class="role">Engenheiro Eletricista | Software Engineer | Data & IoT</div>
+        <div class="role">Software Engineer | Data Engineering | Generative & Agentic AI</div>
         
         <p class="bio">
-            Especialista em unir a solidez da engenharia de hardware à flexibilidade do desenvolvimento de software. Com ampla vivência técnica e de gestão estratégica, atuo projetando arquiteturas de dados assíncronas, automações de processos de missão crítica, soluções robustas de IoT e inteligência artificial aplicada ao ecossistema produtivo.
+            Engenheiro Eletricista e Especialista em Engenharia de Dados, atuando na interseção entre software, dados, automação e inteligência artificial. Lidero tecnicamente sistemas distribuídos e soluções de IA em ambientes de missão crítica, conectando arquitetura, integrações corporativas, observabilidade e operação com impacto mensurável.
         </p>
+
+        <div class="hero-actions">
+            <a href="Jailson_Bezerra_CV_2026_v7.pdf" class="button" download>Baixar currículo (PDF)</a>
+            <a href="mailto:jailson.sb2@gmail.com" class="button secondary">Entrar em contato</a>
+        </div>
+
+        <div class="stats-grid" aria-label="Resultados profissionais em destaque">
+            <div class="stat"><strong>99,8%</strong><span>de conformidade em avaliação de laudos por IA</span></div>
+            <div class="stat"><strong>20%</strong><span>dos atendimentos executados sem interação humana</span></div>
+            <div class="stat"><strong>10+</strong><span>sistemas legados integrados</span></div>
+            <div class="stat"><strong>30%</strong><span>de ganho de produtividade da equipe</span></div>
+        </div>
 
         <!-- Seção de Canais Principais -->
         <div class="links-grid">
-            <a href="https://github.com/jailsonsb2" target="_blank" class="card">
+            <a href="https://github.com/jailsonsb2" target="_blank" rel="noopener noreferrer" class="card">
                 <div class="card-content">
                     <span class="card-title">GitHub</span>
                     <span class="card-desc">Repositórios de código, automações corporativas e contribuições abertas.</span>
@@ -185,7 +337,7 @@
                 <div class="icon">➜</div>
             </a>
             
-            <a href="https://www.linkedin.com/in/jailsonsb/" target="_blank" class="card">
+            <a href="https://www.linkedin.com/in/jailsonsb/" target="_blank" rel="noopener noreferrer" class="card">
                 <div class="card-content">
                     <span class="card-title">LinkedIn</span>
                     <span class="card-desc">Conexões profissionais, artigos técnicos e histórico de carreira.</span>
@@ -193,13 +345,47 @@
                 <div class="icon">➜</div>
             </a>
 
-            <a href="blog/" class="card">
-                <div class="card-content">
-                    <span class="card-title">Blog ✍️</span>
-                    <span class="card-desc">Artigos e notas técnicas sobre engenharia de software, dados, IoT e IA agêntica.</span>
-                </div>
-                <div class="icon">➜</div>
-            </a>
+        </div>
+
+        <h2 class="section-title">Especialidades</h2>
+
+        <div class="content-grid">
+            <article class="panel">
+                <h3>IA Generativa & Sistemas Agênticos</h3>
+                <p>LLMs, RAG, sistemas multiagentes, orquestração de agentes, MCP, Function Calling, avaliação contínua, Human-in-the-loop e guardrails determinísticos.</p>
+            </article>
+            <article class="panel">
+                <h3>Arquitetura & Backend</h3>
+                <p>Python, FastAPI, Django, APIs REST, microsserviços, sistemas distribuídos, arquiteturas orientadas a eventos, RabbitMQ, Docker e Linux.</p>
+            </article>
+            <article class="panel">
+                <h3>Engenharia de Dados</h3>
+                <p>SQL, Apache Airflow, ETL/ELT, pipelines, Power BI, arquitetura Medallion, Lakehouse e conceitos de Databricks.</p>
+            </article>
+            <article class="panel">
+                <h3>Confiabilidade & Automação</h3>
+                <p>Observabilidade, telemetria, monitoramento, testes automatizados E2E, Power Platform e integração de processos empresariais.</p>
+            </article>
+        </div>
+
+        <h2 class="section-title">Experiência em Destaque</h2>
+
+        <div class="timeline">
+            <article class="timeline-item">
+                <h3>Especialista em Engenharia de Dados & IA</h3>
+                <span class="timeline-meta">Claro Brasil · mai/2025 — atual</span>
+                <p>Liderança do NOC Agêntico, plataforma distribuída com React, FastAPI, RabbitMQ, Qdrant e Neo4j. A solução reduziu fluxos com MTTR de até 240 minutos para poucos minutos e ampliou a automação operacional N0.</p>
+            </article>
+            <article class="timeline-item">
+                <h3>Técnico de Rede · Automação & Dados</h3>
+                <span class="timeline-meta">Claro Brasil · ago/2022 — mai/2025</span>
+                <p>Automação crítica, qualidade de dados, integrações e observabilidade. Reestruturação de um processo com mais de 7.000 campos em 3.000+ estações, adotado como novo padrão pela equipe.</p>
+            </article>
+            <article class="timeline-item">
+                <h3>Eletrônica, Telecom & Infraestrutura Crítica</h3>
+                <span class="timeline-meta">Claro Brasil, EBC, Infraero e SEAT · 2009 — 2022</span>
+                <p>Trajetória em redes HFC, broadcast, automação, sistemas aeroportuários e implantação de soluções integradas de hardware e software.</p>
+            </article>
         </div>
 
         <!-- Seção de Projetos Consolidados -->
@@ -207,7 +393,7 @@
         
         <div class="links-grid">
             <!-- DF Bus -->
-            <a href="https://play.google.com/store/apps/details?id=com.jbcast.dfbus" target="_blank" class="card">
+            <a href="https://play.google.com/store/apps/details?id=com.jbcast.dfbus" target="_blank" rel="noopener noreferrer" class="card">
                 <div class="card-content">
                     <span class="card-title">DF Bus 🚌</span>
                     <span class="card-desc">Plataforma independente de mobilidade urbana em tempo real integrando telemetria de GPS públicos com IA conversacional agêntica (Gemini API).</span>
@@ -222,7 +408,7 @@
             </a>
 
             <!-- Rádio PWA -->
-            <a href="https://radio.jailson.es" target="_blank" class="card"> 
+            <a href="https://radio.jailson.es" target="_blank" rel="noopener noreferrer" class="card">
                 <div class="card-content">
                     <span class="card-title">Rádio Digital Multiplataforma 📻</span>
                     <span class="card-desc">Player nativo web customizado para streaming contínuo de áudio digital de baixa latência e alta fidelidade.</span>
@@ -237,7 +423,7 @@
             </a>
 
             <!-- Radio Metadata & History API -->
-            <a href="https://twj.es/dashboard" target="_blank" class="card"> 
+            <a href="https://twj.es/dashboard" target="_blank" rel="noopener noreferrer" class="card">
                 <div class="card-content">
                     <span class="card-title">Radio Metadata & History API ⚙️</span>
                     <span class="card-desc">Arquitetura de microsserviço de alta performance dedicada à raspagem, extração em tempo real e cache de metadados musicais de servidores Icecast/Shoutcast.</span>
@@ -253,7 +439,7 @@
             </a>
 
             <!-- Monitoramento de Energia IoT -->
-            <a href="https://github.com/jailsonsb2/monitoramento-iot" target="_blank" class="card"> 
+            <a href="https://github.com/jailsonsb2/monitoramento-iot" target="_blank" rel="noopener noreferrer" class="card">
                 <div class="card-content">
                     <span class="card-title">Monitoramento de Energia IoT ⚡</span>
                     <span class="card-desc">Infraestrutura ponta a ponta integrando hardware embarcado e processamento de telemetria elétrica em tempo real com barramento assíncrono.</span>
@@ -266,6 +452,23 @@
                 </div>
                 <div class="icon">➜</div>
             </a>
+        </div>
+
+        <h2 class="section-title">Formação</h2>
+
+        <div class="content-grid">
+            <article class="panel">
+                <h3>Engenharia de Dados & Inteligência Artificial</h3>
+                <p>Pós-graduação · Estácio · 2026–2027</p>
+            </article>
+            <article class="panel">
+                <h3>Engenharia Elétrica</h3>
+                <p>Bacharelado · Estácio</p>
+            </article>
+            <article class="panel">
+                <h3>Eletrônica</h3>
+                <p>Curso técnico · ETB · 2006–2008</p>
+            </article>
         </div>
 
         <!-- Rodapé Em Conformidade com o Ano Atual -->
