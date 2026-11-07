@@ -1,108 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#f4f5f7">
-    <title>Jailson Bezerra | Links</title>
-    <meta name="description" content="Links, projetos e canais oficiais de Jailson Bezerra.">
-    <style>
-        :root { --background: #f4f5f7; --surface: #fff; --surface-hover: #f8fafc; --text: #16191d; --muted: #626a73; --line: #dfe3e8; --accent: #087f5b; --accent-soft: #e8f5ef; --focus: #0b6bdb; }
-        * { box-sizing: border-box; }
-        html { color-scheme: light; }
-        body { min-height: 100vh; margin: 0; background: var(--background); color: var(--text); font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; letter-spacing: 0; }
-        .page { width: min(100% - 32px, 620px); margin: 0 auto; padding: 48px 0 32px; }
-        .profile { display: flex; align-items: center; gap: 18px; margin-bottom: 28px; }
-        .profile-image { width: 88px; height: 88px; flex: 0 0 88px; border: 1px solid var(--line); border-radius: 50%; object-fit: cover; background: var(--surface); }
-        .profile-copy { min-width: 0; }
-        h1 { margin: 0 0 5px; font-size: clamp(1.55rem, 5vw, 2rem); line-height: 1.15; letter-spacing: 0; }
-        .handle { margin: 0 0 8px; color: var(--accent); font-size: .9rem; font-weight: 700; }
-        .intro { margin: 0; color: var(--muted); font-size: .95rem; line-height: 1.45; }
-        .section { margin-top: 26px; }
-        .section-title { margin: 0 0 10px; color: var(--muted); font-size: .75rem; font-weight: 800; letter-spacing: 0; text-transform: uppercase; }
-        .link-list { display: grid; gap: 10px; }
-        .link { display: grid; grid-template-columns: 42px minmax(0, 1fr) 20px; align-items: center; gap: 12px; min-height: 72px; padding: 12px 16px 12px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--text); text-decoration: none; transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease; }
-        .link:hover { border-color: #aeb7c0; background: var(--surface-hover); transform: translateY(-1px); }
-        .link:focus-visible { outline: 3px solid color-mix(in srgb, var(--focus) 28%, transparent); outline-offset: 2px; }
-        .link-icon { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 7px; background: var(--accent-soft); color: var(--accent); }
-        .link-icon svg, .arrow svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
-        .link-copy { min-width: 0; }
-        .link-title, .link-description { display: block; }
-        .link-title { margin-bottom: 3px; font-size: .98rem; font-weight: 750; }
-        .link-description { overflow: hidden; color: var(--muted); font-size: .82rem; line-height: 1.35; text-overflow: ellipsis; white-space: nowrap; }
-        .arrow { color: #87909a; }
-        .arrow svg { width: 18px; height: 18px; }
-        footer { margin-top: 32px; color: var(--muted); font-size: .78rem; text-align: center; }
-        @media (max-width: 480px) {
-            .page { width: min(100% - 24px, 620px); padding-top: 28px; }
-            .profile { align-items: flex-start; gap: 14px; }
-            .profile-image { width: 76px; height: 76px; flex-basis: 76px; }
-            .intro { font-size: .88rem; }
-            .link { grid-template-columns: 40px minmax(0, 1fr) 18px; min-height: 68px; }
-            .link-icon { width: 40px; height: 40px; }
-        }
-        @media (prefers-reduced-motion: reduce) { .link { transition: none; } }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b111b">
+  <meta name="description" content="Jailson Bezerra — Engenheiro, arquiteto de soluções de IA e software. Sistemas inteligentes, dados, automação e produtos digitais em produção.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jailson.es/">
+  <meta property="og:title" content="Jailson Bezerra — Engenharia, IA & Software">
+  <meta property="og:description" content="Da arquitetura à produção. Conheça os sistemas, produtos e experiências de Jailson Bezerra.">
+  <meta property="og:image" content="https://jailson.es/eu.jpeg">
+  <title>Jailson Bezerra — Engenharia, IA & Software</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b111b;--surface:#111b29;--surface-2:#172333;--line:#2b3a49;--text:#f3f6f5;--muted:#a6b6be;--accent:#b8ef78;--blue:#8fc6e9;--width:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 'DM Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}a:focus-visible{outline:3px solid var(--accent);outline-offset:5px}::selection{background:var(--accent);color:#09110e}
+    .wrap{width:min(var(--width),calc(100% - 48px));margin:auto}.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:88px;border-bottom:1px solid var(--line)}.brand{font:700 1.4rem 'Space Grotesk',sans-serif;letter-spacing:-.06em}.brand span{color:var(--accent)}.nav-links{display:flex;align-items:center;gap:30px;font-size:.87rem;color:var(--muted);font-weight:700}.nav-links a:hover,.text-link:hover{color:var(--accent)}.nav-contact{border:1px solid #556472;border-radius:100px;padding:9px 17px;color:var(--text)}
+    .hero{position:relative;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(240px,.6fr);gap:60px;align-items:center;padding:104px 0 112px}.eyebrow,.section-kicker{color:var(--accent);font-size:.76rem;letter-spacing:.19em;text-transform:uppercase;font-weight:700}.eyebrow{display:flex;align-items:center;gap:12px}.eyebrow::before{content:"";width:26px;height:1px;background:var(--accent)}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:'Space Grotesk',sans-serif}h1{font-size:clamp(3.25rem,7.2vw,6.6rem);line-height:1.035;letter-spacing:-.075em;margin:24px 0 26px;font-weight:600}h1 em{font-style:normal;color:var(--accent)}.lead{max-width:640px;color:#c0cdd1;font-size:clamp(1rem,1.7vw,1.19rem);line-height:1.8;margin-bottom:32px}.actions{display:flex;align-items:center;flex-wrap:wrap;gap:16px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:14px 22px;border-radius:8px;font-size:.91rem;font-weight:700;border:1px solid var(--line);transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn.primary{background:var(--accent);border-color:var(--accent);color:#142015}.btn.secondary:hover{background:var(--surface-2)}.btn .arrow{font-size:1.2em}.hero-photo{position:relative;max-width:330px;justify-self:end}.hero-photo:before{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid #6d8d66;border-radius:18px;z-index:0}.hero-photo img{position:relative;display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center;border-radius:18px;filter:saturate(.78)}.photo-note{position:absolute;right:-20px;bottom:30px;z-index:1;padding:9px 14px;border:1px solid var(--line);background:#111b29e8;border-radius:6px;font-size:.74rem;color:var(--accent);font-family:'Space Grotesk'}
+    .metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-block:1px solid var(--line);margin-bottom:115px}.metric{padding:26px 28px;border-right:1px solid var(--line)}.metric:first-child{padding-left:0}.metric:last-child{border:0}.metric strong{display:block;font:600 clamp(1.9rem,3vw,2.6rem)/1.1 'Space Grotesk';letter-spacing:-.05em;color:var(--accent)}.metric span{display:block;margin-top:10px;color:var(--muted);font-size:.83rem;line-height:1.45}
+    section.content{padding:0 0 112px}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:35px}.section-heading h2{font-size:clamp(2.2rem,4.1vw,3.7rem);letter-spacing:-.055em;line-height:1.12;margin:10px 0 0;font-weight:600}.section-heading>p{max-width:380px;color:var(--muted);font-size:.94rem;margin-bottom:2px}.featured{display:grid;grid-template-columns:1fr .92fr;gap:0;border:1px solid var(--line);background:linear-gradient(135deg,#172638,#101925);border-radius:18px;overflow:hidden}.featured-copy{padding:clamp(28px,4vw,56px)}.tag{display:inline-block;border:1px solid #526a61;color:var(--accent);font-size:.71rem;text-transform:uppercase;letter-spacing:.12em;font-weight:700;padding:7px 11px;border-radius:100px}.featured h3{font-size:clamp(2.2rem,4vw,3.6rem);line-height:1.1;letter-spacing:-.06em;margin:20px 0}.featured p,.project p,.about p{color:var(--muted)}.featured p{max-width:510px;font-size:1.01rem}.featured .tech{margin-top:27px}.featured-visual{padding:40px;display:flex;flex-direction:column;justify-content:center;gap:14px;background:radial-gradient(circle at 70% 40%,#24513d 0,transparent 53%),#0e1723;border-left:1px solid var(--line)}.flow-node{border:1px solid #45606a;background:#172a36;border-radius:9px;padding:15px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;font:600 .91rem 'Space Grotesk'}.flow-node b{font-size:.7rem;color:var(--accent);font-weight:500}.flow-connector{height:21px;width:1px;background:var(--accent);margin:-14px auto;z-index:1}.flow-node.active{border-color:var(--accent);box-shadow:0 0 24px #b8ef7811}.tech{display:flex;flex-wrap:wrap;gap:8px}.tech span{padding:5px 10px;border-radius:5px;background:#ffffff0a;border:1px solid #ffffff16;color:#c4d0d6;font-size:.75rem}
+    .project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.project{display:flex;flex-direction:column;min-height:305px;padding:30px;background:var(--surface);border:1px solid var(--line);border-radius:14px;transition:transform .2s,border-color .2s}.project:hover{transform:translateY(-4px);border-color:#637d72}.project-top{display:flex;justify-content:space-between;align-items:center;color:var(--accent);font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase}.project-top .external{font-size:1.25rem;letter-spacing:0}.project h3{font-size:1.65rem;line-height:1.16;letter-spacing:-.04em;margin:30px 0 12px}.project p{font-size:.91rem;margin-bottom:22px}.project .tech{margin-top:auto}.project-link{display:block;height:100%}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:90px;padding:45px 0 0;border-top:1px solid var(--line)}.about h2{font-size:clamp(2.1rem,3.3vw,3rem);letter-spacing:-.05em;line-height:1.16}.about p{line-height:1.85}.capabilities{display:grid;grid-template-columns:1fr 1fr;gap:27px 35px}.capability{border-bottom:1px solid var(--line);padding-bottom:20px}.capability h3{font-size:1rem;margin-bottom:8px;color:var(--text)}.capability p{font-size:.88rem;line-height:1.65;margin:0}
+    .contact{padding:60px clamp(28px,6vw,75px);border:1px solid #45684b;border-radius:18px;background:linear-gradient(120deg,#1b352b,#13222c 70%);display:flex;align-items:end;justify-content:space-between;gap:35px}.contact h2{font-size:clamp(2.3rem,4.5vw,4.2rem);letter-spacing:-.065em;line-height:1.1;margin:12px 0 16px}.contact p{color:#b8cbc4;max-width:530px;margin:0}.contact .btn{flex-shrink:0}footer{display:flex;justify-content:space-between;gap:24px;align-items:center;padding:35px 0 45px;color:#90a2ac;font-size:.8rem}footer .socials{display:flex;gap:24px}footer a:hover{color:var(--accent)}
+    @media(max-width:850px){.hero{gap:35px;padding:75px 0 85px}.hero-photo{width:100%}.metrics{margin-bottom:85px}.metric{padding-inline:15px}.featured{grid-template-columns:1fr}.featured-visual{border-left:0;border-top:1px solid var(--line)}.project-grid{grid-template-columns:repeat(2,1fr)}.about-grid{gap:35px}.contact{align-items:start;flex-direction:column}}
+    @media(max-width:620px){.wrap{width:min(100% - 36px,var(--width))}.nav{min-height:72px}.nav-links{gap:15px}.nav-links a:not(.nav-contact){display:none}.hero{grid-template-columns:1fr;gap:42px;padding:64px 0 72px}.hero-copy{order:1}.hero-photo{order:0;justify-self:start;width:155px}.hero-photo img{aspect-ratio:1;object-position:center 35%;border-radius:16px}.hero-photo:before{inset:9px -9px -9px 9px}.photo-note{right:-120px;bottom:10px;font-size:.65rem}h1{font-size:clamp(3.2rem,12vw,5rem)}.metrics{grid-template-columns:repeat(2,1fr);margin-bottom:75px}.metric{padding:20px 12px!important;border-bottom:1px solid var(--line)}.metric:nth-child(odd){padding-left:0!important}.metric:nth-child(even){border-right:0}.metric:nth-child(n+3){border-bottom:0}.section-heading{display:block}.section-heading>p{margin-top:18px}.project-grid,.about-grid,.capabilities{grid-template-columns:1fr}.project{min-height:270px}.featured-visual{padding:27px}.about-grid{gap:20px}.contact{padding:36px 25px}section.content{padding-bottom:78px}footer{align-items:flex-start;flex-direction:column;gap:14px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.project{transition:none}}
+  </style>
 </head>
 <body>
-    <main class="page">
-        <header class="profile">
-            <img src="eu.jpeg" alt="Jailson Bezerra" class="profile-image">
-            <div class="profile-copy">
-                <h1>Jailson Bezerra</h1>
-                <p class="handle">@jailsonsb2</p>
-                <p class="intro">Software, dados, automação e inteligência artificial.</p>
-            </div>
-        </header>
-
-        <section class="section" aria-labelledby="canais-title">
-            <h2 class="section-title" id="canais-title">Canais</h2>
-            <div class="link-list">
-                <a class="link" href="https://github.com/jailsonsb2" target="_blank" rel="noopener noreferrer">
-                    <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.3-.4 6.8-1.6 6.8-7A5.4 5.4 0 0 0 19.4 4 5 5 0 0 0 19.3.5S18.2.1 15 1.8a13.4 13.4 0 0 0-7 0C4.8.1 3.7.5 3.7.5A5 5 0 0 0 3.6 4a5.4 5.4 0 0 0-1.4 3.7c0 5.3 3.5 6.5 6.8 6.9A4.8 4.8 0 0 0 8 18v4"/><path d="M8 19c-3 .9-3-1.5-4-2"/></svg></span>
-                    <span class="link-copy"><span class="link-title">GitHub</span><span class="link-description">Código, projetos e experimentos</span></span>
-                    <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
-                </a>
-                <a class="link" href="https://www.linkedin.com/in/jailsonsb/" target="_blank" rel="noopener noreferrer">
-                    <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6Z"/><path d="M2 9h4v12H2z"/><path d="M4 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/></svg></span>
-                    <span class="link-copy"><span class="link-title">LinkedIn</span><span class="link-description">Perfil profissional e publicações</span></span>
-                    <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
-                </a>
-                <a class="link" href="mailto:contato@jailson.es">
-                    <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.7 5.5a2.4 2.4 0 0 1-2.6 0L2 7"/></svg></span>
-                    <span class="link-copy"><span class="link-title">E-mail</span><span class="link-description">contato@jailson.es</span></span>
-                    <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
-                </a>
-            </div>
-        </section>
-
-        <section class="section" aria-labelledby="projetos-title">
-            <h2 class="section-title" id="projetos-title">Projetos</h2>
-            <div class="link-list">
-                <a class="link" href="https://play.google.com/store/apps/details?id=com.jbcast.dfbus" target="_blank" rel="noopener noreferrer">
-                    <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 6v6h8V6M5 12h14l-1 8H6l-1-8ZM7 6h10l2 6H5l2-6ZM9 20v2M15 20v2"/></svg></span>
-                    <span class="link-copy"><span class="link-title">DF Bus</span><span class="link-description">Mobilidade urbana em tempo real</span></span>
-                    <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
-                </a>
-                <a class="link" href="https://radio.jailson.es" target="_blank" rel="noopener noreferrer">
-                    <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="5" rx="2"/><path d="m8 5 8-3M6 9h8"/><circle cx="16" cy="15" r="3"/><path d="M6 13h2M6 17h2"/></svg></span>
-                    <span class="link-copy"><span class="link-title">Rádio Digital</span><span class="link-description">Streaming de áudio multiplataforma</span></span>
-                    <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
-                </a>
-                <a class="link" href="https://twj.es/dashboard" target="_blank" rel="noopener noreferrer">
-                    <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19V9M10 19V5M16 19v-7M22 19V3M2 19h22"/></svg></span>
-                    <span class="link-copy"><span class="link-title">Radio Metadata</span><span class="link-description">Dashboard e histórico de metadados</span></span>
-                    <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
-                </a>
-                <a class="link" href="https://github.com/jailsonsb2/monitoramento-iot" target="_blank" rel="noopener noreferrer">
-                    <span class="link-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m13 2-9 12h8l-1 8 9-12h-8l1-8Z"/></svg></span>
-                    <span class="link-copy"><span class="link-title">Monitoramento de Energia IoT</span><span class="link-description">Telemetria elétrica em tempo real</span></span>
-                    <span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg></span>
-                </a>
-            </div>
-        </section>
-
-        <footer>jailson.es</footer>
+  <div class="wrap">
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="brand" href="#inicio" aria-label="Jailson Bezerra, início">jailson<span>.</span>es</a>
+      <div class="nav-links"><a href="#projetos">Projetos</a><a href="#sobre">Sobre</a><a class="nav-contact" href="mailto:contato@jailson.es">Vamos conversar ↗</a></div>
+    </nav>
+    <main id="inicio">
+      <header class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow">Engenharia • Inteligência Artificial • Software</div>
+          <h1>Transformo problemas complexos em <em>sistemas reais.</em></h1>
+          <p class="lead">Sou <strong>Jailson Bezerra</strong>, engenheiro eletricista e desenvolvedor de soluções de IA, dados e automação. Desenho arquiteturas, conecto sistemas e construo produtos que funcionam fora do slide — em produção.</p>
+          <div class="actions"><a class="btn primary" href="#projetos">Conheça meu trabalho <span class="arrow">↗</span></a><a class="btn secondary" href="https://www.linkedin.com/in/jailsonsb/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div>
+        </div>
+        <div class="hero-photo"><img src="eu.jpeg" alt="Retrato de Jailson Bezerra" width="330" height="412" fetchpriority="high"><span class="photo-note">Brasília, Brasil · 🇧🇷</span></div>
+      </header>
+      <div class="metrics" aria-label="Impacto em projetos profissionais">
+        <div class="metric"><strong>20%</strong><span>dos atendimentos automatizados no projeto de IA para NOC</span></div>
+        <div class="metric"><strong>~30%</strong><span>de ganho de produtividade na operação</span></div>
+        <div class="metric"><strong>10+</strong><span>sistemas corporativos integrados em uma plataforma</span></div>
+        <div class="metric"><strong>50 mil+</strong><span>downloads de um dos meus aplicativos Android</span></div>
+      </div>
+      <section class="content" id="projetos" aria-labelledby="projects-title">
+        <div class="section-heading"><div><span class="section-kicker">01 / Trabalho em destaque</span><h2 id="projects-title">Soluções com impacto.</h2></div><p>Da inteligência operacional aos produtos independentes: engenharia aplicada a problemas de verdade.</p></div>
+        <article class="featured">
+          <div class="featured-copy"><span class="tag">IA agêntica · AIOps</span><h3>Agentinoc</h3><p>Idealizei e desenvolvi uma plataforma proativa de diagnóstico de redes orientada a eventos. A partir dos alarmes, serviços assíncronos consultam sistemas legados, enriquecem dados, constroem relações de topologia e apoiam ou executam ações de troubleshooting.</p><p>O resultado: diagnósticos que levavam horas passaram a sair em poucos minutos, com cerca de 20% dos atendimentos sem interação humana.</p><div class="tech"><span>Python / FastAPI</span><span>RabbitMQ</span><span>RAG híbrido</span><span>Neo4j</span><span>Qdrant</span><span>React</span></div></div>
+          <div class="featured-visual" role="img" aria-label="Fluxo conceitual da plataforma: alarme recebido, enriquecimento de dados, agentes e diagnóstico com ação operacional"><div class="flow-node"><span>01 · Alarme recebido</span><b>EVENTO</b></div><div class="flow-connector"></div><div class="flow-node"><span>02 · Dados e topologia</span><b>CONTEXTO</b></div><div class="flow-connector"></div><div class="flow-node active"><span>03 · Agentes de IA</span><b>RACIOCÍNIO</b></div><div class="flow-connector"></div><div class="flow-node"><span>04 · Diagnóstico e ação</span><b>RESULTADO</b></div></div>
+        </article>
+      </section>
+      <section class="content" aria-labelledby="other-title"><div class="section-heading"><div><span class="section-kicker">02 / Produtos e open source</span><h2 id="other-title">Ideias que ganharam vida.</h2></div><p>Projetos que nasceram de uma necessidade e evoluíram para aplicações reais.</p></div>
+        <div class="project-grid">
+          <a class="project project-link" href="https://app.dfbus.com.br" target="_blank" rel="noopener noreferrer"><div class="project-top"><span>Mobilidade urbana</span><span class="external">↗</span></div><h3>DF Bus</h3><p>Informação de transporte público do DF em tempo real, busca de linhas, mapas e recursos de IA para apoiar passageiros.</p><div class="tech"><span>React</span><span>FastAPI</span><span>Geodados</span><span>Gemini</span></div></a>
+          <a class="project project-link" href="https://twj.es/dashboard" target="_blank" rel="noopener noreferrer"><div class="project-top"><span>Dados em tempo real</span><span class="external">↗</span></div><h3>Radio Metadata</h3><p>Coleta, processamento e distribuição de metadados de rádios online, com histórico, painéis e integrações em tempo real.</p><div class="tech"><span>APIs</span><span>SSE</span><span>Streaming</span></div></a>
+          <a class="project project-link" href="https://radio.jailson.es" target="_blank" rel="noopener noreferrer"><div class="project-top"><span>Áudio digital</span><span class="external">↗</span></div><h3>Rádio & Players</h3><p>Players e soluções de streaming para web e Android, combinando experiência de uso, integração e infraestrutura.</p><div class="tech"><span>Android</span><span>ExoPlayer</span><span>Web</span></div></a>
+          <a class="project project-link" href="https://github.com/jailsonsb2/monitoramento-iot" target="_blank" rel="noopener noreferrer"><div class="project-top"><span>Engenharia + IoT</span><span class="external">↗</span></div><h3>Energia conectada</h3><p>Monitoramento de grandezas elétricas com dispositivos embarcados, coleta de telemetria e visualização de indicadores.</p><div class="tech"><span>ESP32</span><span>InfluxDB</span><span>Grafana</span></div></a>
+          <a class="project project-link" href="https://github.com/jailsonsb2/metadados" target="_blank" rel="noopener noreferrer"><div class="project-top"><span>Código aberto</span><span class="external">↗</span></div><h3>Metadados open source</h3><p>Implementação aberta para obtenção de metadados de streaming, compartilhada com a comunidade de rádio online.</p><div class="tech"><span>Open source</span><span>API</span><span>Áudio</span></div></a>
+          <a class="project project-link" href="https://github.com/jailsonsb2" target="_blank" rel="noopener noreferrer"><div class="project-top"><span>Laboratório contínuo</span><span class="external">↗</span></div><h3>Mais no GitHub</h3><p>Experimentos, ferramentas e código: automação, backend, dados, aplicações e novas ideias em evolução.</p><div class="tech"><span>Python</span><span>Software</span><span>IA</span></div></a>
+        </div>
+      </section>
+      <section class="content about" id="sobre" aria-labelledby="about-title"><div class="section-kicker">03 / Sobre mim</div><div class="about-grid"><div><h2 id="about-title">Curiosidade técnica. Visão de produto. Execução.</h2><p>Minha trajetória conecta eletrônica, infraestrutura, redes e desenvolvimento. Essa combinação me ajuda a entender a operação por dentro e projetar soluções completas — do dispositivo e dos dados à interface e à inteligência.</p><p>Na Claro Brasil, de 2020 a 2026, atuei na evolução de processos e sistemas para operações de rede, incluindo automações e uma arquitetura própria de IA para troubleshooting. Hoje sigo aprofundando engenharia de dados, IA e arquiteturas de nuvem.</p></div><div class="capabilities"><div class="capability"><h3>Arquitetura & backend</h3><p>Python, FastAPI, APIs REST, mensageria, serviços assíncronos e integração de legados.</p></div><div class="capability"><h3>IA aplicada</h3><p>Agentes, RAG híbrido, bancos vetoriais e grafos, function calling e avaliação de soluções.</p></div><div class="capability"><h3>Dados & plataformas</h3><p>SQL, PostgreSQL, ETL/ELT, Airflow, Redis, Docker e observabilidade.</p></div><div class="capability"><h3>Engenharia & produto</h3><p>Engenharia elétrica, sistemas embarcados, IoT, interfaces web e entrega orientada a impacto.</p></div></div></div></section>
+      <section class="content" id="contato" aria-labelledby="contact-title"><div class="contact"><div><span class="section-kicker">04 / Contato</span><h2 id="contact-title">Vamos construir algo relevante?</h2><p>Aberto a conversas sobre arquitetura de software, inteligência artificial, engenharia de dados e desafios com impacto real.</p></div><a class="btn primary" href="mailto:contato@jailson.es?subject=Vamos%20conversar">Entrar em contato <span class="arrow">↗</span></a></div></section>
     </main>
+    <footer><span>© <span id="year">2026</span> Jailson Bezerra · Feito com atenção aos detalhes.</span><div class="socials"><a href="https://github.com/jailsonsb2" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/jailsonsb/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="mailto:contato@jailson.es">E-mail ↗</a></div></footer>
+  </div>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
